@@ -17,5 +17,5 @@ print(argString.format(argc))
 j = 0
 for arg in sys.argv:
     if j != 0:
-        print("{:d}: {:s}".format(i, arg))
+        print("{:d}: {:s}".format(j, arg))
     j += 1
