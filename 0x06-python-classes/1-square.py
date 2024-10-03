@@ -10,6 +10,8 @@ class Square:
     def __init__(self, size):
     """
     craete new instance of a square size
-
+    
+    Args:
+        size: length of aside of a squre
     """
         self.__size = size
