@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+define a rectangle class
+"""
+
 class Rectangle:
     """ Rectangel class representaion
     """
@@ -12,7 +16,7 @@ class Rectangle:
         """ getter for the width attribute """
         return self.__width
 
-    @width_setter
+    @width.setter
     def width(self, value):
         """ setter for the width attriubute """
         if type(value) is not int:
@@ -26,7 +30,7 @@ class Rectangle:
         """ getter for the height attribute """
         return self.__height
 
-    @height_setter
+    @height.setter
     def height(self, value):
         """ setter for the height attribute """
         if type(value) is not int:
