@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Module for 2-is_same_class.py
+"""Module for 2-is_same_class.py
 """
 
 
