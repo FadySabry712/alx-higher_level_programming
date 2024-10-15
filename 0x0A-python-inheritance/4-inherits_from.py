@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Module for 4-inherits_from.py
+"""Module for 4-inherits_from.py
 """
 
 
