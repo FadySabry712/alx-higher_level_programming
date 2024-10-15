@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module ofr 3-is_kind_of_class
+""" Module for 3-is_kind_of_class
 """
 
 
