@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''Module for 10-Rectangle class.'''
+'''Module for 11-Rectangle class.'''
 Rectangle = __import__('9-rectangle').Rectangle
 
 
@@ -16,5 +16,5 @@ class Square(Rectangle):
         return self.__size ** 2
 
     def __str__(self):
-        ''' return string repr of the square '''
-        return "[Square] " + str(self.__size) + "/" str(self.__size)
+        '''Returns string repr of the square.'''
+        return "[Square] " + str(self.__size) + "/" + str(self.__size)
