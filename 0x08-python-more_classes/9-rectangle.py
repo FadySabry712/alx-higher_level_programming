@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""Rectangle class Representation
-"""
+"""Rectangle class Representation"""
 
 
 class Rectangle:
