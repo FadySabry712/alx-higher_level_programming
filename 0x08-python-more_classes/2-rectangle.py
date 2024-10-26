@@ -4,8 +4,7 @@
 
 class Rectangle:
     """
-    Class defines properties of rectangle.
-
+    Class defines properties of rectangle
     Attributes:
         width (int)
         height (int)
