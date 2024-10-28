@@ -2,18 +2,23 @@
 """101-nqueens finds all possible solutions the N queens puzzle, including
 translations and reflections.
 
+
 Attempted virtual backtracking without recursion. In local tests process will
 start to slow down visibly for N > 8, and is successful up to N = 11 but
 will be killed if used for N > 11. Recursion could allow for a lighter weight
 process, but it's not yet apparent to this student how to retain a record of
 which solutions are already derived with that method.
 
+
 Attributes:
     N (int): base number of queens, and length of board side in piece positions
     candidates (list) of (list) of (list) of (int)
 
 """
+
+
 from sys import argv
+
 
 if len(argv) is not 2:
     print('Usage: nqueens N')
@@ -121,7 +126,10 @@ def coordinate_format(candidates):
                     holberton[x][i].append(j)
     return holberton
 
+
 # init candidates list with first column of 0s
+
+
 candidates = []
 candidates.append(board_column_gen())
 
