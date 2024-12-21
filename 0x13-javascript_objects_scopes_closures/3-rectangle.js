@@ -8,7 +8,6 @@ class Rectangle {
     }
   }
 
-
   print () {
     for (let i = 0; i < this.height; i++) {
       const temp = [];
