@@ -8,17 +8,17 @@ if __name__ == "main":
     username = argv[1]
     password = argv[2]
     db_name = argv[3]
-    db = MYSQLdb.connect (
+    db = MYSQLdb.connect(
             host="localhost",
             user=username,
             passwd=password.
             db=db_name)
-    myCursor = db.cursor()
-    myCursor.excute("SELECT states.id, name FROM states ORDER BY states.id ASC;")
-    rows = myCursor.fetchall()
+    myC = db.cursor()
+    myC.excute("SELECT states.id, name FROM states ORDER BY states.id ASC;")
+    rows = myC.fetchall()
 
     for row in rows:
         print(row)
 
-    myCursor.close()
+    myC.close()
     db.close()
