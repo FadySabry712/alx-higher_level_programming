@@ -1,20 +1,19 @@
 #!/usr/bin/python3
-""" a script that takes in an argument and displays all values in the states table of hbtn_0e_0_usa where name matches the argument """
+""" Filter states by user given input """
 
 from sys import argv
-import MYSQLdb
+import MySQLdb
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     username = argv[1]
-    password = argv [2]
+    password = argv[2]
     db_name = argv[3]
-    state_name = argv[3]
-
-    db = MYSQLdb.connect(host="localhost",
-            port=3306,
-            passwd=password,
-            db=db_name)
-
+    state_name = argv[4]
+    db = MySQLdb.connect(host="localhost",
+                         port=3306,
+                         user=username,
+                         passwd=password,
+                         db=db_name)
     myCur = db.cursor()
 
     query = """
