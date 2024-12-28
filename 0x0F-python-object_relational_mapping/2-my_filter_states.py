@@ -16,13 +16,8 @@ if __name__ == "__main__":
                          db=db_name)
     myCur = db.cursor()
 
-    query = """
-    SELECT states.id, name FROM states WHERE name='{:s}'
-    COLLATE latin1_general_cs
-    ORDER BY states.id ASC;
-    """.format(state_name)
-
-    myCur.execute(query)
+    myCur.execute(cur.execute("SELECT * FROM states WHERE name LIKE BINARY '{}'\
+                ORDER BY states.id ASC".format(sys.argv[4])))
     rows = myCur.fetchall()
     for row in rows:
         print(row)
