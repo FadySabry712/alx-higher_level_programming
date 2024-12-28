@@ -14,10 +14,9 @@ if __name__ == "__main__":
                          passwd=password,
                          db=db_name)
     myC = db.cursor()
-    myC.execute("SELECT states.id, name FROM states WHERE name "
-                "COLLATE latin1_general_cs "
-                "LIKE 'N%' "
-                "ORDER BY states.id ASC;")
+    myC.execute("""SELECT * FROM states WHERE name
+                LIKE BINARY 'N%' ORDER BY states.id ASC""")
+
     rows = myC.fetchall()
     for row in rows:
         print(row)
