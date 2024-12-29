@@ -14,13 +14,13 @@ if __name__ == "__main__":
                          user=username,
                          passwd=password,
                          db=db_name)
-    myCur = db.cursor()
+    myC = db.cursor()
 
-    myCur.execute(cur.execute("SELECT * FROM states WHERE name LIKE BINARY '{}'\
+    myC.execute(cur.execute("SELECT * FROM states WHERE name LIKE BINARY '{}'\
                 ORDER BY states.id ASC".format(sys.argv[4])))
-    rows = myCur.fetchall()
+    rows = myC.fetchall()
     for row in rows:
         print(row)
 
-    myCur.close()
+    myC.close()
     db.close()
