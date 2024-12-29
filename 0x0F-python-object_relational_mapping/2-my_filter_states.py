@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Filter states by user given input """
+""" Filter states by given user input """
 
 from sys import argv
 import MySQLdb
@@ -16,8 +16,13 @@ if __name__ == "__main__":
                          db=db_name)
     myC = db.cursor()
 
-    myC.execute(cur.execute("SELECT * FROM states WHERE name LIKE BINARY '{}'\
-                ORDER BY states.id ASC".format(sys.argv[4])))
+    query = """
+    SELECT states.id, name FROM states WHERE name='{:s}'
+    COLLATE latin1_general_cs
+    ORDER BY states.id ASC;
+    """.format(state_name)
+
+    myC.execute(query)
     rows = myC.fetchall()
     for row in rows:
         print(row)
