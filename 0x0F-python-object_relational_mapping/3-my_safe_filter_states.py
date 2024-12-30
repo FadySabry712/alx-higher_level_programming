@@ -14,7 +14,7 @@ if __name__ == "__main__":
                          user=username,
                          passwd=password,
                          db=db_name)
-    myc = db.cursor()
+    myC = db.cursor()
 
     query = """
     SELECT states.id, name FROM states WHERE name = %s
@@ -28,5 +28,5 @@ if __name__ == "__main__":
     for row in rows:
         print(row)
 
-    myc.close()
+    myC.close()
     db.close()
